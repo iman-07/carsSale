@@ -1,0 +1,77 @@
+.car-list-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .car-card-cart {
+    position: relative;
+    background: black;
+    border: 1px solid orange;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .car-card-cart img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .car-info-cart {
+    margin-top: 10px;
+  }
+  
+  .remove-btn-cart {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .remove-btn-cart:hover {
+    color: #a80000;
+  }
+  
+
+  .cart-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  
+  .details-btn,
+  .buy-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .details-btn {
+    background-color: orange;
+    color: white;
+  }
+  
+  .details-btn:hover {
+    background-color: rgb(187, 127, 17);
+  }
+  
+  .buy-btn {
+    background-color: orange;
+    color: white;
+  }
+  
+  .buy-btn:hover {
+    background-color: rgb(187, 127, 17);
+  }
+  

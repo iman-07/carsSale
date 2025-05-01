@@ -1,0 +1,118 @@
+.buy-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.buy-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.buy-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.buy-car-info,
+.buy-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: black;
+  border: 1px solid orange;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-car-info img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.buy-form {
+  background-color: black;
+}
+
+.buy-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buy-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.buy-form input {
+  width: 100%;
+  padding: 8px 5px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.buy-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-form button:hover {
+  background-color: #0a5800;
+}
+
+.btn1 {
+  background-color: #fff !important;
+  color: black !important;
+}
+
+.btn1:hover {
+  background-color: #c6b2b2 !important;
+  color: rgb(58, 42, 42) !important;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .buy-page {
+    padding: 10px;
+  }
+
+  .buy-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy-car-info,
+  .buy-form {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .buy-page h1 {
+    font-size: 24px;
+  }
+
+  .buy-form h2 {
+    font-size: 20px;
+  }
+}

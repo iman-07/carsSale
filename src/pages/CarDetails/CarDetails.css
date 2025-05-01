@@ -1,0 +1,108 @@
+.car-details-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    margin-top: 20px;
+    border: 1px solod orange;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cars-det {
+    display: flex;
+    gap: 20px;
+    border: 1px solid orange;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  
+  .car-details-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .car-details-images .main-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .car-details-images .thumbnail-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .car-details-images .thumbnail-row img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .car-details-images .thumbnail-row img.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+  }
+  
+  
+  .car-details-images .thumbnail-row img:hover {
+    border-color: #007bff;
+  }
+  
+  .car-details-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .car-details-info h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .car-details-info .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .car-details-info .specs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+  
+  .car-details-info .buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .car-details-info .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .car-details-info .buttons .buy {
+    background-color: orange;
+    color: white;
+  }
+  
+  .car-details-info .buttons .back {
+    background-color: #ddd;
+    color: black;
+  }
+  

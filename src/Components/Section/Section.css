@@ -1,0 +1,187 @@
+.car-section {
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  border: 1px solid orange;
+  max-width: 1200px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  h2 {
+    color: #fff !important;
+  }
+}
+
+.car-list-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.car-sect {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid orange;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative;
+  color: #fff;
+}
+
+.car-sect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.car-image-container-section {
+  position: relative;
+}
+
+.car-sect img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+.car-info-section {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h3 {
+    color: #fff !important;
+  }
+}
+
+.car-section h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.car-info-section p {
+  font-size: 16px;
+  color: #f97316;
+  font-weight: bold;
+}
+
+.car-info-section button {
+  align-self: start;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f97316;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.car-info-section button:hover {
+  background-color: #e55b00;
+  transform: scale(1.05);
+}
+
+.card-actions-section {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions-section button {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-actions-section button:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.card-actions-section .like-btn-section svg {
+  color: #e74c3c;
+}
+
+.card-actions-section .cart-btn-section svg {
+  color: #2ecc71;
+}
+
+.like-btn-section.active {
+  color: red;
+}
+
+.cart-btn-section.active {
+  color: green;
+}
+
+.like-btn-section, .cart-btn-section {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sect-auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sect-auto h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.sect-auto button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sect-auto button:hover {
+  background-color: #e55b00;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .car-list-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .car-list-section {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .car-list-section {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+.ad-banner-main {
+  background: rgba(51, 51, 51, 0.5); 
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(51, 51, 51, 0.5)); 
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 400px;
+}
+
+
+.ad-content-main {
+  text-align: center;
+}
+
+.ad-banner-main h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ad-banner-main p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.slider-main {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.slider-main img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.car-rec-main {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.car-rec-main h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.car-rec-main p {
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ad-banner-main {
+    padding: 16px;
+    margin: 15px 0;
+  }
+
+  .slider-main img {
+    height: 180px;
+  }
+
+  .ad-banner-main h3 {
+    font-size: 18px;
+  }
+
+  .ad-banner-main p {
+    font-size: 14px;
+  }
+}
