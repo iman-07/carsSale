@@ -13,39 +13,51 @@ export const CarDetails = () => {
     return <div>Машина не найдена</div>;
   }
 
-  const [mainImage, setMainImage] = useState(car.images?.[0] || car.image); 
+  const [mainImage, setMainImage] = useState(car.image?.[0] || car.image);
 
   return (
-    <div className="car-details-container"> 
-    <div className='cars-det'>
-      <div className="car-details-images">
-        <img className="main-image" src={mainImage} alt="Главное фото" />
-        {car.images?.length > 1 && (
-          <div className="thumbnail-row">
-            {car.images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Фото ${index + 1}`}
-                onClick={() => setMainImage(image)}
-                className={image === mainImage ? 'selected' : ''}
-              />
-            ))}
+    <div className="car-details-container">
+      <div className='cars-det'>
+        <div className="car-details-images">
+          <img className="main-image" src={mainImage} alt="Главное фото" />
+
+          {car.image?.length > 1 && (
+            <div className="thumbnail-row">
+              {car.image.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Фото ${index + 1}`}
+                  onClick={() => setMainImage(image)}
+                  className={image === mainImage ? 'selected' : ''}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="car-details-info">
+          <h2 className="car-title">{car.name}</h2>
+          <div className="price">{car.price}</div>
+
+          <div className="specs">
+            {typeof car.description === 'object' ? (
+              <ul>
+                {Object.entries(car.description).map(([key, value], index) => (
+                  <li key={index}><strong>{key}:</strong> {value}</li>
+                ))}
+              </ul>
+            ) : (
+              <div>{car.description || 'Описание отсутствует.'}</div>
+            )}
           </div>
-        )}
-      </div>
-      <div className="car-details-info">
-        <h2>{car.name}</h2>
-        <div className="price">{car.price}</div>
-        <div className="specs">
-          <div><strong>Описание:</strong> {car.description || 'Описание отсутствует.'}</div>
-        </div>
-        <div className="buttons">
-          <button className="back" onClick={() => navigate("/")}>Назад</button>
-          <button className="buy" onClick={() => navigate(`/buy/${car.id}`)}>Купить</button>
+
+          <div className="buttons">
+            <button className="back" onClick={() => navigate("/all-cars")}>Назад</button>
+            <button className="buy" onClick={() => navigate(`/buy/${car.id}`)}>Купить</button>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

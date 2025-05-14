@@ -30,11 +30,11 @@ const allCars = [
   { id: 24, name: 'Land Rover Range Rover', price: '$105,882', image: '/src/assets/car-marka-images/range-rover.jpg' }
 ];
 
-
 export const AllCars = () => {
   const navigate = useNavigate();
   const [likedCars, setLikedCars] = useState([]);
   const [cartCars, setCartCars] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const storedLikes = JSON.parse(localStorage.getItem('likedCars')) || [];
@@ -63,39 +63,60 @@ export const AllCars = () => {
     );
   };
 
+  const filteredCars = allCars.filter((car) =>
+    car.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="all-cars-container">
       <h1>Все автомобили</h1>
-      <button className="back-btn-all" onClick={() => navigate("/")}>Назад</button>
-      <div className="car-list-all">  
-        {allCars.map((car) => (
-          <div className="car-alls-all" key={car.id}>
-            <div className="car-image-container-all">
-              <img src={car.image} alt={car.name} />
-              <div className="card-actions-all">
-                <button
-                  className={`like-btn ${likedCars.includes(car.id) ? 'active' : ''}`}
-                  onClick={() => toggleLike(car.id)}
-                >
-                  <FaHeart style={{ color: likedCars.includes(car.id) ? 'red' : '#aaa' }} />
-                </button>
-                <button
-                  className={`cart-btn ${cartCars.includes(car.id) ? 'active' : ''}`}
-                  onClick={() => toggleCart(car.id)}
-                >
-                  <FaShoppingCart style={{ color: cartCars.includes(car.id) ? 'green' : '#aaa' }} />
-                </button>
+      <div className="top-controls">
+        <button className="back-btn-all" onClick={() => navigate("/")}>Назад</button>
+        <input
+          type="text"
+          placeholder="Поиск по названию..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+      </div>
+
+
+
+      <div className="car-list-all">
+        {filteredCars.length > 0 ? (
+          filteredCars.map((car) => (
+            <div className="car-alls-all" key={car.id}>
+              <div className="car-image-container-all">
+                <img src={car.image} alt={car.name} />
+                <div className="card-actions-all">
+                  <button
+                    className={`like-btn ${likedCars.includes(car.id) ? 'active' : ''}`}
+                    onClick={() => toggleLike(car.id)}
+                  >
+                    <FaHeart style={{ color: likedCars.includes(car.id) ? 'red' : '#aaa' }} />
+                  </button>
+                  <button
+                    className={`cart-btn ${cartCars.includes(car.id) ? 'active' : ''}`}
+                    onClick={() => toggleCart(car.id)}
+                  >
+                    <FaShoppingCart style={{ color: cartCars.includes(car.id) ? 'green' : '#aaa' }} />
+                  </button>
+                </div>
+              </div>
+              <div className="car-all-all">
+                <h3>{car.name}</h3>
+                <p>{car.price}</p>
+                <Link to={`/car/${car.id}`}>
+                  <button>Подробнее</button>
+                </Link>
               </div>
             </div>
-            <div className="car-all-all">
-              <h3>{car.name}</h3>
-              <p>{car.price}</p>
-              <Link to={`/car/${car.id}`}>
-                <button>Подробнее</button>
-              </Link>
-            </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="not-found-message">Автомобиль не найден</p>
+        )}
+
       </div>
     </div>
   );

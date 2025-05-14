@@ -12,6 +12,9 @@ export const BuyPage = () => {
     return <div className="buy-page"><h2>Машина не найдена</h2></div>;
   }
 
+  const mainImage = car.image?.[0] || ''; // Первый элемент массива image как главное изображение
+  const otherImages = car.image?.slice(1) || []; // Остальные элементы для миниатюр
+
   const handleSubmit = (e) => { 
     e.preventDefault();
     alert('Спасибо за покупку! Мы свяжемся с вами.');
@@ -27,7 +30,8 @@ export const BuyPage = () => {
       <h1>Покупка машины: {car.name}</h1>
       <div className="buy-content">
         <div className="buy-car-info">
-          <img src={car.image || car.images?.[0]} alt={car.name} />
+          {/* Используем mainImage для главного изображения */}
+          <img src={mainImage} alt={car.name} />
           <p><strong>Цена:</strong> {car.price}</p>
           <p>{car.description || 'Описание отсутствует.'}</p>
         </div>
@@ -46,8 +50,8 @@ export const BuyPage = () => {
             <input type="email" required />
           </label>
           <div className='flex1'>
-          <button className='btn1' type="button" onClick={handleCancel}>Отмена</button>
-          <button type="submit">Подтвердить покупку</button>
+            <button className='btn1' type="button" onClick={handleCancel}>Отмена</button>
+            <button type="submit">Подтвердить покупку</button>
           </div>
         </form>
       </div>

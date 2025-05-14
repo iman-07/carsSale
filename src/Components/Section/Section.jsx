@@ -4,10 +4,11 @@ import './Section.css';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 
 const cars = [
-  { id: 1, name: 'BMW M5', price: '7 500 000 ₽', image: '/src/assets/car-marka-images/m5.webp' },
-  { id: 2, name: 'Audi RS6', price: '8 200 000 ₽', image: '/src/assets/car-marka-images/rs6.webp' },
-  { id: 3, name: 'BMW E63', price: '9 000 000 ₽', image: '/src/assets/car-marka-images/e63.jpg' },
-  { id: 4, name: 'Toyota Camry', price: '2 400 000 ₽', image: '/src/assets/car-marka-images/camry.webp' },
+  { id: 1, name: 'Kia K5', price: '$23,529', image: '/src/assets/car-marka-images/k5.webp' },
+  { id: 2, name: 'Mazda 6', price: '$27,058', image: '/src/assets/car-marka-images/mazda.avif' },
+  { id: 3, name: 'Toyota Camry', price: '$28,235', image: '/src/assets/car-marka-images/camry.webp' },
+  { id: 4, name: 'Lexus RX', price: '$49,411', image: '/src/assets/car-marka-images/rx.jpg' },
+
 ];
 
 export const Section = () => {
@@ -77,12 +78,12 @@ export const Section = () => {
               <h3>{car.name}</h3>
               <p>{car.price}</p>
               <div className='flex'>
-              <Link to={`/car/${car.id}`}>
-                <button>Подробнее</button>
-              </Link>
-              <Link to={`/buy/${car.id}`}>
-                <button>Купить</button>
-              </Link>
+                <Link to={`/car/${car.id}`}>
+                  <button>Подробнее</button>
+                </Link>
+                <Link to={`/buy/${car.id}`}>
+                  <button>Купить</button>
+                </Link>
               </div>
             </div>
           </div>

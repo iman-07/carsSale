@@ -54,11 +54,11 @@ export const Header = () => {
       <div className="header-right">
         <Link to="/favorites" className="menu-item">
           <FaHeart />
-          {likedCount > 0 && <span className="badge">{likedCount}</span>} {/* Круг с количеством */}
+          {likedCount > 0 && <span className="badge">{likedCount}</span>} 
         </Link>
         <Link to="/cart" className="menu-item">
           <FaShoppingCart />
-          {cartCount > 0 && <span className="badge">{cartCount}</span>} {/* Круг с количеством */}
+          {cartCount > 0 && <span className="badge">{cartCount}</span>}
         </Link>
       </div>
       <div className="burger-menu" onClick={toggleMenu} ref={burgerRef}>

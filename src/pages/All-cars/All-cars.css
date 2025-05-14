@@ -10,22 +10,7 @@
   margin-bottom: 30px;
 }
 
-.back-btn-all {
-  display: block;
-  margin: 0 auto 30px;
-  background-color: orange;
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
 
-.back-btn-all:hover {
-  background-color: rgb(156, 115, 38);
-}
 .car-list-all {
   display: grid;
   grid-template-columns: repeat(4, 300px);
@@ -128,6 +113,51 @@
 .cart-btn.active {
   background-color: rgba(0, 128, 0, 0.1);
 }
+
+.top-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* чтобы на маленьких экранах переносилось */
+  margin: 20px auto;
+}
+
+.back-btn-all {
+  display: block;
+  background-color: orange;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn-all:hover {
+  background-color: rgb(156, 115, 38);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid orange;
+  border-radius: 8px;
+  background-color: orange;
+  color: #fff !important;
+}
+
+
+.not-found-message {
+  text-align: center;
+  font-size: 20px;
+  color: #888;
+  margin-top: 30px;
+}
+
 
 @media (max-width: 768px) {
   .all-cars-container h1 {
