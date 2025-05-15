@@ -23,7 +23,7 @@ export const Contact = () => {
             <div className="contact-content">
                 <div className="contact-info">
                     <h2>Контактная информация</h2>
-                    <p><strong>Адрес:</strong> ул. Автомобильная, 77, Москва</p>
+                    <p><strong>Адрес:</strong> ул. Турусбекова, 134, Бишкек</p>
                     <p className='tel'><strong>Телефон: </strong>   <a href="https://wa.me/+996 503 203 020">+996 503 203 020</a></p>
                     <p><strong>Email:</strong> info@automarket.ru</p>
                     <p><strong>Время работы:</strong> Пн–Сб, 9:00–19:00</p>

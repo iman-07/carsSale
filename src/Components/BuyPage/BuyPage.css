@@ -56,7 +56,9 @@
   padding: 8px 5px;
   margin-top: 5px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  background-color: black;
+  color: white;
+  border: 1px solid orange;
 }
 
 .buy-form button {
